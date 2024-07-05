@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "minhas-tarefas"
+version = "0.1.0"
+description = ""
+authors = ["Ricardo Roson <rroson@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+fastapi = "^0.111.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pytest-cov = "^5.0.0"
+taskipy = "^1.13.0"
+
+[tool.pytest.ini_options]
+pythonpath = "."
+addopts = '-p no:warnings'
+
+[tool.taskipy.tasks]
+run = 'fastapi dev minhas_tarefas/app.py'
+test = 'pytest -s -x --cov=minhas_tarefas -vv'
+post_test = 'coverage html'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
