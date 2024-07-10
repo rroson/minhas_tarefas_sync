@@ -15,8 +15,5 @@ def read_root():
     return {'mensagem': 'Olá mundo!'}
 
 @app.get("/html", response_class=HTMLResponse)
-def retorna_html():
-    async def read_item(request: Request):
-        return templates.TemplateResponse(
-            request=request, name="index.html"
-        )
+async def retorna_html(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})

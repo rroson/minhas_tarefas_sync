@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/main_style.css">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/main_style.css') }}">
   <link rel="icon" href="imagens/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,18 +29,18 @@
 
   <section id="titulo">
     <div class="container-topo">
-      <img class="sol" src="imagens/sol.png" alt="sol">
-      <img class="nuvem-topo" src="imagens/nuvem.png" alt="nuvem">
+      <img class="sol" src="{{ url_for('static', path='imagens/sol.png') }}" alt="sol">
+      <img class="nuvem-topo" src="{{ url_for('static', path='imagens/nuvem.png') }}" alt="nuvem">
       <h1>Ricardo Roson</h1>
       <p class="titulo">Desenvolvedor</p>
-      <img class="nuvem-baixo" src="imagens/nuvem.png" alt="nuvem">
-      <img class="montanha" src="imagens/montanha.png" alt="montanha">
+      <img class="nuvem-baixo" src="{{ url_for('static', path='imagens/nuvem.png') }}" alt="nuvem">
+      <img class="montanha" src="{{ url_for('static', path='imagens/montanha.png') }}" alt="montanha">
     </div>
   </section>
 
   <div class="container-meio">
     <div class="perfil">
-      <img class="foto-img" src="imagens/avatar.png" alt="Foto de Ricardo">
+      <img class="foto-img" src="{{ url_for('static', path='imagens/avatar.png') }}" alt="Avatar de Ricardo">
       <h2>Olá.</h2>
       <p class="texto-intro">Olá, seja bem vindo! Espero conseguir mostrar aqui um pouco da minha caminhada profissional.</p>
     </div>
@@ -48,7 +48,7 @@
     <div class="educacao">
       <h2>Formação Acadêmica.</h2>
       <div class="sub_linha">
-        <img class="row-img" src="imagens/graduacao.png" alt="imagem de diploma">
+        <img class="row-img" src="{{ url_for('static', path='imagens/graduacao.png') }}" alt="imagem de diploma">
         <h3>ESAMC</h3>
         <p>Pós: MBA - Marketing com Especialização em Tendências & Inovação - Campinas-SP.</p>
         <h3>USF – Universidade São Francisco</h3>
@@ -58,7 +58,7 @@
       <div class="experiencia">
         <h2>Experiência Profissional.</h2>
         <div class="sub_linha">
-          <img class="office-img" src="imagens/office.png" alt="imagem de pessoa trabalhando">
+          <img class="office-img" src="{{ url_for('static', path='imagens/office.png') }}" alt="imagem de pessoa trabalhando">
           <h3>Colégio Litteratus - Centro de Educação e Cultura</h3>
           <p>Professor de tecnologia, programação e robótica (FI, FII e EM)</p>
           <p>Gestor de TI</p>
@@ -76,13 +76,13 @@
       <div class="habilidades">
         <h2>Habilidades.</h2>
         <div class="sub_linha">
-          <img class="notebook-img" src="imagens/habilidades_logo.png" alt="imagem de notebook">
+          <img class="notebook-img" src="{{ url_for('static', path='imagens/habilidades_logo.png') }}" alt="imagem de notebook">
           <h3>Linguagens e Sistemas</h3>
           <p>HTML(5), CSS(3), Javascript, JQuery, Bootstrap Framework, JSON, XML, MySQL, Python, Linux, Linha de Comando</p>
           <p>Análise de dados (Pandas), Webscrapping, Programação GUI</p>
         </div>
         <div class="sub_linha">
-          <img class="computador-img" src="imagens/computador.png" alt="imagem de computador">
+          <img class="computador-img" src="{{ url_for('static', path='imagens/computador.png') }}" alt="imagem de computador">
           <h3>Hardware e Redes</h3>
           <p>Servidores Linux, Redes Locais</p>
           <p>Suporte e manutenção em desktops e notebooks</p>
