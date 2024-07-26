@@ -1,19 +1,10 @@
 from http import HTTPStatus
 from fastapi import FastAPI, HTTPException
 from minhas_tarefas.schemas import Mensagem, UsuarioSchema, UsuarioPublic, UsuarioDB, UsuarioList
-# from fastapi.responses import HTMLResponse
-# from fastapi.requests import Request
-# from fastapi.staticfiles import StaticFiles
-# from fastapi.templating import Jinja2Templates
+
 
 app = FastAPI()
-# app.mount("/static", StaticFiles(directory="static"), name="static")
-# templates = Jinja2Templates(directory="templates")
 database = [] #Fake Database
-
-# @app.get("/html/", response_class=HTMLResponse)
-# async def retorna_html(request: Request):
-#     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.get("/", status_code=HTTPStatus.OK, response_model=Mensagem)
 def read_root():
